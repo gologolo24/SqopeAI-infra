@@ -17,7 +17,7 @@ validated locally (see [Validation](#10-validation)).
 
 Related repos (question 1):
 - [SqopeAI](https://github.com/gologolo24/SqopeAI): the services and their CI
-- [sqope-ai-gitops-dev](https://github.com/gologolo24/sqope-ai-gitops-dev): what ArgoCD deploys
+- [SqopeAI-gitops-dev](https://github.com/gologolo24/SqopeAI-gitops-dev): what ArgoCD deploys
 
 ---
 
@@ -311,7 +311,7 @@ Kept out to keep the example focused on the three requested components:
 | Next component | What it adds |
 |---|---|
 | `live/shared/ecr` | ECR repositories + the **GitHub OIDC role** that the SqopeAI pipeline needs to push images (question 1) |
-| `live/<env>/platform` | Installs **ArgoCD**, **External Secrets Operator** and the **AWS Load Balancer Controller** via the Helm provider, then applies the [GitOps root app](https://github.com/gologolo24/sqope-ai-gitops-dev/blob/main/bootstrap/root-app.yaml) |
+| `live/<env>/platform` | Installs **ArgoCD**, **External Secrets Operator** and the **AWS Load Balancer Controller** via the Helm provider, then applies the [GitOps root app](https://github.com/gologolo24/SqopeAI-gitops-dev/blob/main/bootstrap/root-app.yaml) |
 | Private EKS API | VPN / Transit Gateway, then turn the public endpoint off (tracked in `.trivyignore`) |
 | VPC endpoints | ECR, S3 and STS endpoints: less NAT traffic and tighter egress |
 

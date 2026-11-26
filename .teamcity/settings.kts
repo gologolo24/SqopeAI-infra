@@ -8,7 +8,7 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
- * TeamCity pipeline for sqope-ai-infra (Kotlin DSL, versioned in this repo, so a pipeline change
+ * TeamCity pipeline for SqopeAI-infra (Kotlin DSL, versioned in this repo, so a pipeline change
  * goes through code review like any other change).
  *
  *   Pull request :  1. Validate ──► 2. Plan dev | Plan staging | Plan prod      (read-only role)
@@ -29,8 +29,8 @@ val toolbox = "%toolbox.image%"
 
 val infraRepo = GitVcsRoot({
     id("InfraRepo")
-    name = "sqope-ai-infra"
-    url = "https://github.com/gologolo24/sqope-ai-infra.git"
+    name = "SqopeAI-infra"
+    url = "https://github.com/gologolo24/SqopeAI-infra.git"
     branch = "refs/heads/main"
     branchSpec = "+:refs/heads/*"
     authMethod = password {
