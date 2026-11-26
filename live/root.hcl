@@ -53,7 +53,7 @@ generate "provider" {
           Environment = "${local.env.env}"
           Component   = "${local.component}"
           ManagedBy   = "terragrunt"
-          Repository  = "github.com/gologolo24/sqope-ai-infra"
+          Repository  = "github.com/gologolo24/SqopeAI-infra"
         }
       }
     }
