@@ -1,0 +1,11 @@
+# Accepted risks for `trivy config`. Each entry: why, the plan to remove it, owner, expiry date.
+# After the expiry date Trivy fails the build again and the decision must be re-reviewed.
+
+# EKS public API endpoint. It stays on so engineers (via VPN) and CI agents can reach the API, but
+# it is restricted to allow-listed CIDRs (api_allowed_cidrs, never 0.0.0.0/0).
+# Plan: private-only endpoint, reached over VPN / Transit Gateway.  owner: platform
+AWS-0040 exp:2027-06-30
+
+# Worker-node egress to 0.0.0.0/0 (through the NAT gateway). Nodes must pull images and call AWS APIs.
+# Plan: VPC endpoints (ECR, S3, STS) + Kubernetes NetworkPolicies to narrow egress.  owner: platform
+AWS-0104 exp:2027-06-30

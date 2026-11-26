@@ -1,0 +1,16 @@
+# terraform / terragrunt working files
+.terraform/
+.terragrunt-cache/
+*.tfstate
+*.tfstate.*
+*.tfplan
+plan-*.txt
+crash.log
+# lock files of the wrapper modules (units are the root modules)
+modules/**/.terraform.lock.hcl
+
+# teamcity kotlin dsl build output
+.teamcity/target/
+
+.DS_Store
+.idea/
